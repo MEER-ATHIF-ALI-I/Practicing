@@ -88,10 +88,38 @@
 
 //creating a promise
 
-// const promised =new Promise(function(res,rej){
+const cart=["shoes", "pants", "kurta"];
 
-// })
-// async function getData(){
-//     return "Namaste"
-// }
-// const data=getData()
+const promise = createOrder(cart);
+//{data:orderDetails}   
+promise.then(function(orderId){
+    console.log("Order Created with OrderId: ",orderId);
+    // proceedToPayment(orderId);
+})
+.catch(function(err){
+  console.log(err.message);
+});
+
+//producer
+function createOrder(cart){
+    const pr =new Promise(function(resolve,reject){
+        //createOrder
+        //ValidateCart
+        //OrderId
+        if(!validateCart(cart)){
+            const err= new Error("Cart is not Valid")
+            reject(err);
+        }
+        //logic for createOrder
+        const orderId="12345";
+        if(orderId){
+            resolve(orderId);
+        }
+    })
+    return pr;
+}
+
+function validateCart(cart){
+    return true;
+}
+
