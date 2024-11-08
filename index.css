@@ -1,0 +1,60 @@
+.block{
+    width: 200px;
+    height:200px;
+    margin-top:10px;
+    margin-right:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+    padding:30px;
+    border: 30px red solid;
+    /* border-top:10px; */
+    /* padding-top:10px;
+    padding-bottom:10px */
+}
+.inline{
+ width:300px;
+ height:300px;
+ /* margin-top: 10px; browser does not respect
+ margin-bottom: 10px; */
+ margin-right:10px;
+ margin-left:10px;
+ padding-top:10px;
+ padding-right:10px;
+ padding-bottom:10px;
+ padding-left:10px;
+ border:10px red solid;
+}
+
+/* for class 'a', browser doesn't increase width and height because display:inline doesn't respect width and height */
+span.a {
+    display: inline; /* the default for span */
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;
+    background-color: yellow;
+  }
+  /* display inline-block doesn't starts in a new line but respects width and height, whereas not applying doesn't take the full width (I mean by default it acts like inline + doesn't span full width) */
+  span.b {
+    display: inline-block;
+    width:100px;
+    height:100px;
+    padding: 10px;
+    margin: 20px 30px;
+    box-sizing: content-box; 
+    border: 1px solid blue;
+    background-color: yellow;
+  }
+  
+  /* display block starts in a new line and takes full width by default and respects width and height*/
+  span.c {
+    display: block;
+    padding: 10px;
+    width:100px;
+    height:100px;
+    box-sizing: border-box;
+    margin: 20px 30px; 
+    border: 1px solid blue;
+    background-color: yellow;
+  }
+  /* width-201

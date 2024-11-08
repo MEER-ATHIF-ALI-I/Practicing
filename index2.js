@@ -88,38 +88,38 @@
 
 //creating a promise
 
-const cart=["shoes", "pants", "kurta"];
+// const cart=["shoes", "pants", "kurta"];
 
-const promise = createOrder(cart);
-//{data:orderDetails}   
-promise.then(function(orderId){
-    console.log("Order Created with OrderId: ",orderId);
-    // proceedToPayment(orderId);
-})
-.catch(function(err){
-  console.log(err.message);
-});
+// const promise = createOrder(cart);
+// //{data:orderDetails}   
+// promise.then(function(orderId){
+//     console.log("Order Created with OrderId: ",orderId);
+//     // proceedToPayment(orderId);
+// })
+// .catch(function(err){
+//   console.log(err.message);
+// });
 
-//producer
-function createOrder(cart){
-    const pr =new Promise(function(resolve,reject){
-        //createOrder
-        //ValidateCart
-        //OrderId
-        if(!validateCart(cart)){
-            const err= new Error("Cart is not Valid")
-            reject(err);
-        }
-        //logic for createOrder
-        const orderId="12345";
-        if(orderId){
-            resolve(orderId);
-        }
-    })
-    return pr;
-}
+// //producer
+// function createOrder(cart){
+//     const pr =new Promise(function(resolve,reject){
+//         //createOrder
+//         //ValidateCart
+//         //OrderId
+//         if(!validateCart(cart)){
+//             const err= new Error("Cart is not Valid")
+//             reject(err);
+//         }
+//         //logic for createOrder
+//         const orderId="12345";
+//         if(orderId){
+//             resolve(orderId);
+//         }
+//     })
+//     return pr;
+// }
 
-function validateCart(cart){
-    return true;
-}
+// function validateCart(cart){
+//     return true;
+// }
 
